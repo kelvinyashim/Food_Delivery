@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery/colors.dart';
 import 'package:food_delivery/widgtes/big_texts.dart';
 import 'package:food_delivery/widgtes/small_text.dart';
-import 'package:food_delivery/homepage/food_page_body.dart';
+import 'package:food_delivery/homepage/food_page_slide.dart';
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({Key? key}) : super(key: key);
 
