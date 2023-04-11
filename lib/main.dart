@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/homepage/main_food_page.dart';
+import 'package:food_delivery/pages/homepage/main_food_page.dart';
+import 'package:food_delivery/pages/popular_food.dart';
+import 'package:get/get.dart';
+import 'package:food_delivery/pages/homepage/recommended.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: MainFoodPage(),
+  runApp(GetMaterialApp(
+    home: ReccomendedFood(), //MainFoodPage(),
     debugShowCheckedModeBanner: false,
   ));
 }
-
-
-

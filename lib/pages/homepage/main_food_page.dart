@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/colors.dart';
+import 'package:food_delivery/pages/homepage/food_page_slide.dart';
 import 'package:food_delivery/widgtes/big_texts.dart';
 import 'package:food_delivery/widgtes/small_text.dart';
-import 'package:food_delivery/homepage/food_page_slide.dart';
+
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({Key? key}) : super(key: key);
 
@@ -13,15 +14,20 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
+    //print(MediaQuery.of(context).size.height.toString());
+    //This above code is how we get the height of a device
     return Scaffold(
       body: Column(
         children: [
-          Container(//We'll use this later
+          Container(
+            //We'll use this later
             child: Container(
               //We can add a margin because the Containers are to close up to the screen
-              margin: EdgeInsets.only(top: 35, bottom: 20), //Now the two containers are spaceBetween too much we can adjust that with padding
-              padding:  EdgeInsets.only(left: 20, right: 20),
-              child: Column(//Now with this Column the containers appear at the top
+              margin: EdgeInsets.only(top: 35, bottom: 20),
+              //Now the two containers are spaceBetween too much we can adjust that with padding
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: Column(
+                //Now with this Column the containers appear at the top
                 children: [
                   Row(//default property is vertically center
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,8 +53,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                           child: Icon(Icons.search, color: Colors.white),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            color: AppColors.mainColour
-                          ),
+                              color: AppColors.mainColour),
                         ),
                       )
                     ],
@@ -57,7 +62,14 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ),
             ),
           ),
-          FoodPageView()
+          Expanded(
+            //WE USED EXPANNDED BECAUSE REMEMBER ANYTHING WRAPPED UNDER IT TAKES UP THE ONLY AVAILABLE SPACE
+            child: SingleChildScrollView(
+                child:
+                    FoodPageView() //WE wrapped this under SingleChild because we want not only
+                //the images to be scrollable for the List View Builder
+                ),
+          )
         ],
       ),
 

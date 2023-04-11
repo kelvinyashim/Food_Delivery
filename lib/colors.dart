@@ -1,8 +1,10 @@
 import 'dart:ui';
 
-class AppColors{ //Static final means you can access the attributes of this class anywhere in the code
+class AppColors {
+  //Static final means you can access the attributes of this class anywhere in the code without needing to create an instance of the class
   static final Color textColour = const Color(0xFFccc7c5);
   static final Color mainColour = const Color(0xFF89dad0);
+
   //static final Color textColour = const Color(0xFFfa7552);
   static final Color iconColour1 = const Color(0xFFffd28d);
   static final Color iconColour2 = const Color(0xFFfcab88);

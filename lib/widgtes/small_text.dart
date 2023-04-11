@@ -25,8 +25,7 @@ class SmallText extends StatelessWidget { //? optional
           color: color,
           fontWeight: FontWeight.w100,
           fontFamily: "Roboto",
-          fontSize: size
-      ),
+          fontSize: size),
     );
   }
 }
